@@ -10,36 +10,32 @@
 <h3>demo one - comp sci chancing</h3>
 
 <h4>Input your marks</h4>
-<p>ENG4U</p>
-<input type="number" id="ENG" value="">
+    <form id="mean-form">
+        <label for="course1">ENG4U: </label>
+        <input type="text" id="course1" class="input-box"><br>
 
-  <p>MCV4U</p>
-  <input type="number" id="MCV" value="">
+        <label for="course2">MCV4U: </label>
+        <input type="text" id="course2" class="input-box"><br>
 
-  <p>Course 3</p>
-  <input type="number" id="three" value="">
+        <label for="course3">Course 3:</label>
+        <input type="text" id="course3" class="input-box"><br>
 
-  <p>Course 4</p>
-  <input type="number" id="four" value="">
+        <label for="course4">Course 4:</label>
+        <input type="text" id="course4" class="input-box"><br>
 
-  <p>Course 5</p>
-  <input type="number" id="five" value="">
+        <label for="course5">Course 5:</label>
+        <input type="text" id="course5" class="input-box"><br>
 
-  <p>Course 6</p>
-  <input type="number" id="six" value="">
+        <label for="course6">Course 6:</label>
+        <input type="text" id="course6" class="input-box"><br>
 
-<p>Click the "Try it" button to get the text in the text field.</p>
+        <button type="button" onclick="calculateProb()">Calculate Chance</button>
+    </form>
 
-<button onclick="myFunction()">Try it</button>
+    <h2>Odds </h2>
+    <p id="result"></p>
 
-<p id="demo"></p>
+    <script src="script.js"></script>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("ENG").value;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
-<p id="ENG"></p>
 </body>
 </html>
