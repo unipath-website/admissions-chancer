@@ -18,10 +18,14 @@ function calculateProb() {
 
     
     const sum = numbers.reduce((acc, num) => acc + num, 0);
+    if (sum.valueOf > 600) {
+        document.getElementById('result').textContent = 'Invalid';
+        return;
+    }
     const mean = sum / numbers.length;
     const zscnum = mean - 96.9
     const zscore = zscnum / 3.05
-    
-    
-    document.getElementById('result').textContent = `${zscore.toFixed(2)}`;
+    const probabilitor = math.erf(zscore)
+
+    document.getElementById('result').textContent = `${probabilitor.toFixed(2)}`;
 }
