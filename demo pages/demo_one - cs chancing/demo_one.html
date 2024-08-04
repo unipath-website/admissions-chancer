@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:width="http://www.w3.org/1999/xhtml">
   <head>
     <link rel="stylesheet" href="style.css">
     
@@ -8,6 +8,15 @@
 <body>
 
 <h3>demo one - comp sci chancing</h3>
+
+<label for="school">Choose a university:</label>
+
+<select name="school" id="school">
+    <option value="utsg">University of Toronto - St. George</option>
+    <option value="uw">University of Waterloo</option>
+    <option value="tmu">Toronto Metropolitan University</option>
+    <option value="mac">McMaster University</option>
+</select>
 
 <h4>Input your marks</h4>
     <form id="mean-form">
@@ -32,7 +41,7 @@
         <button type="button" onclick="calculateProb()">Calculate Chance</button>
     </form>
 
-    <h2>Odds </h2>
+    <h2>Odds</h2>
     <p id="result"></p>
 
     <script src="script.js"></script>
