@@ -22,24 +22,22 @@
 <h4>Input your marks</h4>
     <form id="mean-form">
         <label for="course1">ENG4U: </label>
-        <input type="text" id="course1" class="input-box"><br>
+        <input type="text" onclick="calculateProb()" id="course1" class="input-box"><br>
 
         <label for="course2">MCV4U: </label>
-        <input type="text" id="course2" class="input-box"><br>
+        <input type="text" oninput="calculateProb()" id="course2" class="input-box"><br>
 
         <label for="course3">Course 3:</label>
-        <input type="text" id="course3" class="input-box"><br>
+        <input type="text" oninput="calculateProb()" id="course3" class="input-box"><br>
 
         <label for="course4">Course 4:</label>
-        <input type="text" id="course4" class="input-box"><br>
+        <input type="text" oninput="calculateProb()" id="course4" class="input-box"><br>
 
         <label for="course5">Course 5:</label>
-        <input type="text" id="course5" class="input-box"><br>
+        <input type="text" oninput="calculateProb()" id="course5" class="input-box"><br>
 
         <label for="course6">Course 6:</label>
-        <input type="text" id="course6" class="input-box"><br>
-
-        <button type="button" onclick="calculateProb()">Calculate Chance</button>
+        <input type="text" oninput="calculateProb()" id="course6" class="input-box"><br>
     </form>
 
     <h2>Odds</h2>

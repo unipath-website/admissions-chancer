@@ -12,7 +12,7 @@ function calculateProb() {
     const numbers = values.map(value => parseFloat(value)).filter(value => !isNaN(value));
     
     if (numbers.length === 0) {
-        document.getElementById('result').textContent = 'Mean: Invalid input';
+        document.getElementById('result').textContent = '';
         return;
     }
 
