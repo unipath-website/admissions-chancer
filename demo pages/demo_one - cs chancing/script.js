@@ -17,15 +17,11 @@ function calculateProb() {
     }
 
     
-    const sum = numbers.reduce((acc, num) => acc + num, 0);
-    if (sum.valueOf > 600) {
-        document.getElementById('result').textContent = 'Invalid';
-        return;
-    }
-    const mean = sum / numbers.length;
-    const zscnum = mean - 96.9
-    const zscore = zscnum / 3.05
-    const probabilitor = math.erf(zscore)
+    let sum = numbers.reduce((acc, num) => acc + num, 0);
+    let mean = sum / numbers.length;
+    let zscnum = mean - 96.9
+    let zscore = zscnum / 3.05
+    let probabilitor = 100 * (0.5 + 0.5 * (math.erf(zscore)))
 
-    document.getElementById('result').textContent = `${probabilitor.toFixed(2)}`;
-}
+    document.getElementById('result').textContent = `${probabilitor.toFixed(2)} ${"%"}`;
+}`${num} ${str}`
