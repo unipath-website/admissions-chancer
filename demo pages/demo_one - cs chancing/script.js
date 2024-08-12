@@ -1,3 +1,9 @@
+function schooling() {
+    var schoolname = document.getElementByName("school")[0].value;
+    if (schoolname.value == mac) {
+        let sumtingwong = "hello";
+    }
+}
 function calculateProb() {
     const values = [
         document.getElementById('course1').value,
@@ -15,7 +21,6 @@ function calculateProb() {
         document.getElementById('result').textContent = '';
         return;
     }
-
     
     let sum = numbers.reduce((acc, num) => acc + num, 0);
     let mean = sum / numbers.length;

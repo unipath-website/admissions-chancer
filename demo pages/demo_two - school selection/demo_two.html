@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>demo two</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+</head>
+<img src="../unipath.png" alt="logo">
+<body>
+
+<h3>demo two - school selection</h3>
+
+<label for="myDropdown">Choose an option:</label>
+<select id="myDropdown" onchange="schoolSelection()">
+    <option value="">--Select an option--</option>
+    <option value="utsg">UTSG</option>
+    <option value="another">Another School</option>
+    <option value="yetAnother">Yet Another School</option>
+</select>
+
+<p id="displayText">Selected value will be displayed here.</p>
+
+<script src="script.js"></script>

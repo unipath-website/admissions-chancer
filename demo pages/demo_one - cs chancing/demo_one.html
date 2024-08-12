@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
-<title>unipath.demo</title>
+<title>demo one</title>
   <head>
     <link rel="stylesheet" href="style.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
   </head>
-  <img src="unipath.png" alt="logo">
+  <img src="../unipath.png" alt="logo">
 <body>
 
 <h3>demo one - comp sci chancing</h3>
-
-<label for="school">Choose a university:</label>
-
-<select name="school" id="school">
-    <option value="ut">University of Toronto</option>
-    <option value="uw">University of Waterloo</option>
-    <option value="tmu">Toronto Metropolitan University</option>
-    <option value="mac">McMaster University</option>
-</select>
 
 <h4>Input your marks</h4>
     <form id="mean-form">
@@ -39,7 +30,7 @@
         <label for="course6">Course 6:</label>
         <input type="text" oninput="calculateProb()" id="course6" class="input-box"><br>
     </form>
-
+    <button type="button" onclick="calculateProb()">Click Me!</button>
     <h2>Odds</h2>
     <p id="result"></p>
 
