@@ -40,6 +40,18 @@ function schoolStatistics() {
             mean = 93.9;
             stdev = 2;
             break;
+        case 'ott':
+            mean = 91;
+            stdev = 4.82;
+            break;
+        case 'wlu':
+            mean = 83.8;
+            stdev = 6.55;
+            break;
+        case 'yu':
+            mean = 87.9;
+            stdev = 5.76;
+            break;
         default:
             mean = 0;
             stdev = 1;
