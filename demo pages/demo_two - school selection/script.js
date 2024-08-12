@@ -7,11 +7,12 @@ function schoolSelection() {
     // Define a mapping of values to display text
     const displayMap = {
         'utsg': 'University of Toronto St. George',
-        'utsc': 'Another School',
-        'utm': 'Yet Another School',
-        'yetAnother': 'Yet Another School',
-        'yetAnother': 'Yet Another School',
-        'yetAnother': 'Yet Another School',
+        'utsc': 'University of Toronto Scarborough',
+        'utm': 'University of Toronto Mississauga',
+        'uw': 'University of Waterloo',
+        'qu': "Queen's University",
+        'mac': 'McMaster University',
+        'wu': 'Western University'
     };
 
     // Get the <p> element where the selected value will be displayed
