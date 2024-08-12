@@ -78,7 +78,7 @@ function calculateProb() {
     let sum = numbers.reduce((acc, num) => acc + num, 0);
     let top6 = sum / numbers.length;
     let zscnum = top6 - mean
-    let zscore = zscnum / stdev
+    let zscore = zscnum / (Math.sqrt(2) * stdev)
     let probabilitor = 100 * (0.5 + 0.5 * (math.erf(zscore)))
 
     document.getElementById('result').textContent = `${probabilitor.toFixed(2)} ${"%"}`;
