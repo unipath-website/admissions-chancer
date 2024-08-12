@@ -1,23 +1,40 @@
 function schoolSelection() {
-    const dropdown = document.getElementById('myDropdown');
+    let mean;
+    let stdev;
 
-    // Get the selected value
-    const selectedValue = dropdown.value;
+    const dropdown = document.getElementById('schoolSelect');
+    const resultParagraph = document.getElementById('result');
 
-    // Define a mapping of values to display text
-    const displayMap = {
-        'utsg': 'University of Toronto St. George',
-        'utsc': 'University of Toronto Scarborough',
-        'utm': 'University of Toronto Mississauga',
-        'uw': 'University of Waterloo',
-        'qu': "Queen's University",
-        'mac': 'McMaster University',
-        'wu': 'Western University'
-    };
+    function updateValues() {
+        const selectedValue = dropdown.value;
 
-    // Get the <p> element where the selected value will be displayed
-    const displayText = document.getElementById('displayText');
+        switch (selectedValue) {
+            case 'utsg':
+                mean = 96.9;
+                stdev = 3.05;
+                break;
+            case 'mac':
+                mean = 96.9;
+                stdev = 2.47;
+                break;
 
-    // Set the text content of the <p> element based on the selected value
-    displayText.textContent = displayMap[selectedValue] || 'Selected value will be displayed here.';
+            default:
+                mean = 0;
+                stdev = 0;
+                break;
+        }
+
+
+        console.log('Mean:', mean);
+        console.log('Standard Deviation:', stdev);
+        resultParagraph.textContent = `Mean: ${mean}, Standard Deviation: ${stdev}`;
+    }
+
+
+
+
+// Initialize values on page load
+
 }
+dropdown.addEventListener('change', updateValues);
+updateValues();
