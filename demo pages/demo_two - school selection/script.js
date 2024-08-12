@@ -32,6 +32,14 @@ function schoolStatistics() {
             mean = 96.9;
             stdev = 2.47;
             break;
+        case 'wu':
+            mean = 92.5;
+            stdev = 3.88;
+            break;
+        case 'tmu':
+            mean = 93.9;
+            stdev = 2;
+            break;
         default:
             mean = 0;
             stdev = 1;
