@@ -1,3 +1,5 @@
+let name;
+let schoolloc;
 function changeImage() {
     const imageSelector = document.getElementById("imageSelector").value;
     const imageElement = document.getElementById("displayedImage");
