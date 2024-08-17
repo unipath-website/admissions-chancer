@@ -1,8 +1,15 @@
 let mean;
 let stdev;
+let name;
+let schoolloc;
+
 
 const dropdown = document.getElementById('schoolSelect');
 const resultParagraph = document.getElementById('result');
+
+const imageElement = document.getElementById("displayedImage");
+const schoolName = document.getElementById('schoolname');
+const schoolLocation = document.getElementById('schoollocation');
 
 
 function calculateProb() {
@@ -28,14 +35,22 @@ function calculateProb() {
         case 'utsg':
             mean = 96.9;
             stdev = 3.05;
+            imageElement.src = "utsg.jpg";
+            name = "University of Toronto"
+            schoolloc = "Toronto, ON"
             break;
         case 'utm':
             mean = 92;
             stdev = 4.2;
+            imageElement.src = "utsg.png";
+            name = "University of Toronto Mississauga"
+            schoolloc = "Mississauga, ON"
             break;
         case 'utsc':
             mean = 95.2;
             stdev = 3.43;
+            name = "University of Toronto Scarborough"
+            schoolloc = "Scarborough, ON"
             break;
         case 'uw':
             mean = 97.8;
@@ -80,6 +95,7 @@ function calculateProb() {
     let zscnum = top6 - mean
     let zscore = zscnum / (Math.sqrt(2) * stdev)
     let probabilitor = 100 * (0.5 + 0.5 * (math.erf(zscore)))
-
+    schoolName.textContent = `${name}`;
+    schoolLocation.textContent = `${schoolloc}`
     document.getElementById('result').textContent = `${probabilitor.toFixed(2)} ${"%"}`;
 }`${num} ${str}`
