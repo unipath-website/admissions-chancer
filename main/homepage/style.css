@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     font-family: 'Poppins', sans-serif;
     background: white;
@@ -7,7 +9,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.opening {
+    margin-top: 0%;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20%;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -26,7 +33,6 @@ nav {
     font-weight: bold;
     font-style: italic;
     background-color: #ffffff;
-    font-weight: 525;
     text-align: center;
     margin: auto;
 }
@@ -38,6 +44,7 @@ nav {
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
+    letter-spacing: 0;
 }
 
 .nav-links a {
@@ -63,7 +70,7 @@ nav {
     margin: auto;
     text-align: center;
     line-height: 1em;
-    font-size: 2.75em;
+    font-size: 2.70em;
     font-style: italic;
     top: 50%;
     width: 65%
@@ -73,6 +80,7 @@ nav {
     padding: 1%;
     text-align: center;
     width: 65%;
+    letter-spacing: -0.03em;
 }
 @media (max-width: 768px) {
     nav {
@@ -126,6 +134,11 @@ body {
 
     white-space: nowrap;
 }
+.logos h2 {
+    text-align: center;
+    margin: 20px;
+    font-style: italic;
+}
 .logos:hover .logos-slide {
     animation-play-state: paused;
 }
@@ -150,4 +163,32 @@ body {
     .nav-links a {
         font-size: 16px;
     }
+}
+
+.Card1 {
+    width: 65%;
+    background-color: ghostwhite;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 80px auto; /* Optional: centers the div */
+}
+.Card1 h1 {
+    background: transparent;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+}
+.Card1 h2 {
+    background: transparent;
+    letter-spacing: -0.03em;
+}
+.Card1 p {
+    background: transparent;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: dimgray;
+    width: 60%;
+}
+.CardLeft {
+    background: transparent;
+    width: 60%;
 }
