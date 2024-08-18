@@ -22,3 +22,12 @@ img {
 p {
     font-weight: 400;
 }
+table {
+    border-spacing: 10px;
+    margin: -10px;
+}
+input {
+    border-color: transparent;
+    background: #f2f2f2;
+    border-radius: 5px;
+}

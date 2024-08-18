@@ -14,3 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-weight: 400;
 }
+table {
+    border-spacing: 10px;
+    margin: -10px;
+}
+input {
+    border-color: transparent;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
