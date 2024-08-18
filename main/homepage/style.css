@@ -13,7 +13,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    padding: 20px 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 0px;
     letter-spacing: -0.03em
 }
 
@@ -31,6 +34,10 @@ nav {
 .nav-links {
     display: flex;
     margin: auto;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .nav-links a {
