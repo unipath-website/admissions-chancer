@@ -7,21 +7,7 @@
 </head>
 <img src="unipath.png" alt="logo">
 <body>
-<br></br>
-<label for="schoolSelect">Choose a university: </label>
-<select id="schoolSelect" onchange="calculateProb()">
-  <option value="utsg">University of Toronto</option>
-  <option value="utm">University of Toronto Mississauga</option>
-  <option value="utsc">University of Toronto Scarborough</option>
-  <option value="uw">University of Waterloo</option>
-  <option value="qu">Queen's University</option>
-  <option value="mac">McMaster University</option>
-  <option value="wu">Western University</option>
-  <option value="tmu">Toronto Metropolitan University</option>
-  <option value="ott">University of Ottawa</option>
-  <option value="wlu">Wilfrid Laurier University</option>
-  <option value="yu">York University</option>
-</select>
+
 <h4>Input your marks</h4>
 <form id="mean-form">
   <label for="course1">ENG4U: </label>
@@ -42,7 +28,23 @@
   <label for="course6">Course 6:</label>
   <input type="text" onclick="calculateProb()" id="course6" class="input-box"><br>
 
-  <img id="displayedImage" src="default.jpg" alt="Image" style="width:150px; height:auto;">
+  <br></br>
+  <label for="schoolSelect">Choose a university: </label>
+  <select id="schoolSelect" onchange="calculateProb()" onclick="schoolSelect()">
+    <option value="utsg">University of Toronto</option>
+    <option value="utm">University of Toronto Mississauga</option>
+    <option value="utsc">University of Toronto Scarborough</option>
+    <option value="uw">University of Waterloo</option>
+    <option value="qu">Queen's University</option>
+    <option value="mac">McMaster University</option>
+    <option value="wu">Western University</option>
+    <option value="tmu">Toronto Metropolitan University</option>
+    <option value="ott">University of Ottawa</option>
+    <option value="wlu">Wilfrid Laurier University</option>
+    <option value="yu">York University</option>
+  </select>
+  <br></br>
+  <img id="displayedImage" alt="Image" style="width:150px; height:auto;">
   <h2 id="schoolname"></h2>
   <p id="schoollocation"></p>
   <h2>Odds</h2>

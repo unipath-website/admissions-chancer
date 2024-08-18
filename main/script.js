@@ -35,7 +35,7 @@ function calculateProb() {
         case 'utsg':
             mean = 96.9;
             stdev = 3.05;
-            imageElement.src = "utsg.jpg";
+            imageElement.src = "./logo/UniversityOfToronto.jpg";
             name = "University of Toronto"
             schoolloc = "Toronto, ON"
             break;
@@ -55,22 +55,37 @@ function calculateProb() {
         case 'uw':
             mean = 97.8;
             stdev = 3.9;
+            name = "University of Waterloo"
+            schoolloc = "Waterloo, ON"
+            imageElement.src = "./logo/UniversityOfWaterloo.svg";
             break;
         case 'qu':
             mean = 93.3;
             stdev = 3.96;
+            name = "Queen's University"
+            schoolloc = "Kingston, ON"
+            imageElement.src = "./logo/QueensU.svg";
             break;
         case 'mac':
             mean = 96.9;
             stdev = 2.47;
+            name = "McMaster University"
+            schoolloc = "Hamilton, ON"
+            imageElement.src = "./logo/McMaster_University_Logo.svg"
             break;
         case 'wu':
             mean = 92.5;
             stdev = 3.88;
+            name = "Western University"
+            schoolloc = "London, ON"
+            imageElement.src = "./logo/WesternUniversity.svg"
             break;
         case 'tmu':
             mean = 93.9;
             stdev = 2;
+            name = "Toronto Metropolitan University"
+            schoolloc = "Toronto, ON"
+            imageElement.src = "./logo/TMU-rgb.png"
             break;
         case 'ott':
             mean = 91;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 * {
     font-family: 'Poppins', sans-serif;
-    background: #F3F4F4;
+    background: white;
 }
 body {
     margin: 0;
@@ -21,8 +21,11 @@ nav {
     color: #000;
     font-size: 24px;
     font-weight: bold;
+    font-style: italic;
     background-color: #ffffff;
-    font-weight: 700;
+    font-weight: 525;
+    text-align: center;
+    margin: auto;
 }
 
 .nav-links {
@@ -33,9 +36,36 @@ nav {
 .nav-links a {
     color: #000;
     text-decoration: none;
-    padding: 0 25px;
+    padding: 0 40px;
     font-size: 18px;
     background-color: #ffffff;
+}
+.landing {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background: white;
+}
+.welcome {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    letter-spacing: -0.03em;
+}
+.welcome h1 {
+    margin: auto;
+    text-align: center;
+    line-height: 1em;
+    font-size: 2.75em;
+    font-style: italic;
+    top: 50%;
+    width: 65%
+}
+.welcome p {
+    margin: auto;
+    padding: 1%;
+    text-align: center;
+    width: 65%;
 }
 @media (max-width: 768px) {
     nav {
@@ -65,7 +95,46 @@ nav {
         text-align: center;
     }
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #ffffff;
+}
 
+@keyframes slide {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+.logos {
+    overflow: hidden;
+    padding: 30px 0;
+    background: #ffffff;
+
+    white-space: nowrap;
+}
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+.logos-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+    background: #fff;
+}
+.logos-slide img {
+    height: 50px;
+    margin-top: 0;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 0;
+    background: #ffffff;
+}
 @media (max-width: 480px) {
     .logo {
         font-size: 20px;

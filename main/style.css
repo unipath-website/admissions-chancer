@@ -10,6 +10,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
+img {
+    min-height: 30px;
+    width: auto;
+}
+.displayedImage img {
+    height: 40px;
+    width: auto;
+}
 
 p {
     font-weight: 400;
