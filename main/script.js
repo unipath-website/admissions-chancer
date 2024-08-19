@@ -36,7 +36,6 @@ function calculateProb() {
             mean = 96.9;
             stdev = 3.05;
             imageElement.src = "./logo/UniversityOfToronto.jpg";
-            name = "University of Toronto"
             schoolloc = "Toronto, ON"
             break;
         case 'utm':
@@ -110,7 +109,6 @@ function calculateProb() {
     let zscnum = top6 - mean
     let zscore = zscnum / (Math.sqrt(2) * stdev)
     let probabilitor = 100 * (0.5 + 0.5 * (math.erf(zscore)))
-    schoolName.textContent = `${name}`;
     schoolLocation.textContent = `${schoolloc}`
     document.getElementById('result').textContent = `${probabilitor.toFixed(2)} ${"%"}`;
 }`${num} ${str}`

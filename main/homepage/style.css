@@ -73,7 +73,7 @@ nav {
     font-size: 2.70em;
     font-style: italic;
     top: 50%;
-    width: 65%
+    width: 600px;
 }
 .welcome p {
     margin: auto;
@@ -87,9 +87,10 @@ nav {
         flex-direction: column;
         align-items: flex-start;
     }
-    .logo {
+    .logo p, h1, h2, h3, h4 {
         color: #000;
         font-size: 24px;
+        font-family: 'Urbanist', sans-serif;
         font-weight: bold;
         background-color: #ffffff;
         font-weight: 700;
@@ -164,31 +165,34 @@ body {
         font-size: 16px;
     }
 }
-
-.Card1 {
-    width: 65%;
-    background-color: ghostwhite;
-    border-radius: 20px;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    margin: 80px auto; /* Optional: centers the div */
+    border-radius: 20px;
+    background: ghostwhite;
+    width: 800px;
+    margin: auto;
 }
-.Card1 h1 {
+.container p, h1, h2, h3, img {
     background: transparent;
-    font-size: 40px;
-    letter-spacing: -0.03em;
 }
-.Card1 h2 {
-    background: transparent;
-    letter-spacing: -0.03em;
+
+.text-column {
+    flex: 1;
+    padding: 10px;
+    background: ghostwhite;
 }
-.Card1 p {
-    background: transparent;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: dimgray;
-    width: 60%;
+
+.image-column {
+    flex: 1;
+    padding: 10px;
+    background: ghostwhite;
 }
-.CardLeft {
-    background: transparent;
-    width: 60%;
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
