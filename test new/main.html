@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>unipath.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+  <script src="script.js" defer></script> <!-- External JS file -->
+</head>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+  <nav>
+    <div class="logo" href="">unipath.</div>
+  </nav>
+  <nav>
+    <div class="nav-links">
+      <a href="">Chancing</a>
+      <a href="">Explore</a>
+      <a href="">About</a>
+    </div>
+  </nav>
+</head>
+<body>
+
+<h4>Input your marks</h4>
+<table>
+  <tr>
+    <td>ENG4U</td>
+    <td><input type="text" onchange="calculateProb()" id="course1" class="input-box"><br></td>
+  </tr>
+  <tr>
+    <td>MCV4U</td>
+    <td><input type="text" onchange="calculateProb()" id="course2" class="input-box"><br></td>
+  </tr>
+  <tr>
+    <td>Course 3</td>
+    <td><input type="text" onchange="calculateProb()" id="course3" class="input-box"><br></td>
+  </tr>
+  <tr>
+    <td>Course 4</td>
+    <td><input type="text" onchange="calculateProb()" id="course4" class="input-box"><br></td>
+  </tr>
+  <tr>
+    <td>Course 5</td>
+    <td><input type="text" onchange="calculateProb()" id="course5" class="input-box"><br></td>
+  </tr>
+  <tr>
+    <td>Course 6</td>
+    <td><input type="text" onchange="calculateProb()" id="course6" class="input-box"><br></td>
+  </tr>
+</table>
+
+<label for="schoolSelect">Choose a university: </label>
+<select id="schoolSelect" onchange="populatePrograms()">
+  <option value="utsg">University of Toronto</option>
+  <option value="uw">University of Waterloo</option>
+  <option value="mac">McMaster University</option>
+</select>
+<br>
+<label for="programSelect">Choose a program: </label>
+<select id="programSelect" onchange="calculateProb()">
+</select>
+<br>
+<br>
+<img id="displayedImage" alt="Image" style="width:150px; height:auto;">
+<p id="schoollocation"></p>
+<h2>Odds</h2>
+<p id="result"></p>
+
+</body>
+</html>
