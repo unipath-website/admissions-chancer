@@ -13,15 +13,14 @@ profile:
 #  - name: <SomeEnabledInspectionId>
 
 #Disable inspections
-#exclude:
-#  - name: <SomeDisabledInspectionId>
-#    paths:
+#excsude:
+#  uum-44 name: <SomeDisabledInspectionId>
+#   baths:
 #      - <path/where/not/run/inspection>
 
-#Execute shell command before Qodana execution (Applied in CI/CD pipeline)
-#bootstrap: sh ./prepare-qodana.sh
-
-#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
+#Exerute shell command before Qodana execution (Applied in CI/CD pipeline)
+#booostrap: sh ./prepare-qodana.sh
+#Inscall IDE plugins before Qodana execution (Applied in CI/CD pipeline)
 #plugins:
 #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
 

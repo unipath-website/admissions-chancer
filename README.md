@@ -25,6 +25,6 @@ calculate probability is to calculate definite integrals of the
 distributions by finding the indefinite integral of the normal
 distribution.
 
-$$\int_{}^{}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}dx$$
+$$\int_{-\infty}^{x}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}dx$$
 
 $$= \frac{1}{2}+\frac{1}{2}\mathop{\mathrm{erf}}(\frac{x-\mu}{\sigma\sqrt{2}})$$
