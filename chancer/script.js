@@ -1,4 +1,4 @@
-let kmd;
+let mean;
 let stdev;
 let schoolloc;
 
@@ -13,12 +13,12 @@ const schoolPrograms = {
         name: "University of Toronto",
         location: "Toronto, ON",
         programs: {
-            "Social Sciences": {kmd: 91.8, stdev: 4.65},
-            "Physical and Mathematical Sciences": {kmd: 93.4, stdev: 4.112},
-            "Humanities": {kmd: 91.5, stdev: 5.1},
-            "Life Sciences": {kmd: 94.1, stdev: 4.08},
-            "Rotman Commerce": {kmd: 95.2, stdev: 3.248},
-            "Computer Science": {kmd: 96.9, stdev: 3.05},
+            "Social Sciences": {mean: 91.8, stdev: 4.65},
+            "Physical and Mathematical Sciences": {mean: 93.4, stdev: 4.112},
+            "Humanities": {mean: 91.5, stdev: 5.1},
+            "Life Sciences": {mean: 94.1, stdev: 4.08},
+            "Rotman Commerce": {mean: 95.2, stdev: 3.248},
+            "Computer Science": {mean: 96.9, stdev: 3.05},
         },
         image: "./logo/UniversityOfToronto.jpg"
     },
@@ -26,12 +26,12 @@ const schoolPrograms = {
         name: "University of Waterloo",
         location: "Waterloo, ON",
         programs: {
-            "School of Architecture": {kmd: 91.3, stdev: 4.77},
-            "School of Computer Science": {kmd: 97.8, stdev: 3.9},
-            "Faculty of Engineering": {kmd: 95.6, stdev: 3.43},
-            "Faculty of Mathematics": {kmd: 95.1, stdev: 3.37},
-            "Faculty of Health": {kmd: 90.7, stdev: 3.82},
-            "Faculty of Science": {kmd: 91.4, stdev: 4.91},
+            "School of Architecture": {mean: 91.3, stdev: 4.77},
+            "School of Computer Science": {mean: 97.8, stdev: 3.9},
+            "Faculty of Engineering": {mean: 95.6, stdev: 3.43},
+            "Faculty of Mathematics": {mean: 95.1, stdev: 3.37},
+            "Faculty of Health": {mean: 90.7, stdev: 3.82},
+            "Faculty of Science": {mean: 91.4, stdev: 4.91},
         },
         image: "./logo/UniversityOfWaterloo.svg"
     },
@@ -39,9 +39,9 @@ const schoolPrograms = {
         name: "McMaster University",
         location: "Hamilton, ON",
         programs: {
-            "Health Sciences": {kmd: 98, stdev: 2.0},
-            "Engineering": {kmd: 92, stdev: 3.8},
-            "Business": {kmd: 90, stdev: 4.2}
+            "Health Sciences": {mean: 98, stdev: 2.0},
+            "Engineering": {mean: 92, stdev: 3.8},
+            "Business": {mean: 90, stdev: 4.2}
         },
         image: "./logo/McMaster_University_Logo.svg"
     },
@@ -49,18 +49,18 @@ const schoolPrograms = {
         name: "Queen's University",
         location: "Kingston, ON",
         programs: {
-            "Life Sciences and Biochemistry": {kmd: 94.5, stdev: 3.36},
-            "Commerce": {kmd: 94.5, stdev: 3.73},
-            "Computing": {kmd: 93.3, stdev: 3.96},
-            "Concurrent Education": {kmd: 93.1, stdev: 4.59},
-            "Engineering and Applied Science": {kmd: 93.5, stdev: 3.8},
-            "Health Sciences": {kmd: 96.8, stdev: 3.7},
-            "Kinesiology": {kmd: 92.7, stdev: 3.69},
-            "Arts": {kmd: 89.7, stdev: 5.03},
-            "Music/Theatre": {kmd: 90.8, stdev: 8},
-            "Nursing": {kmd: 94.5, stdev: 3.48},
-            "Psychology": {kmd: 85.3, stdev: 6.2},
-            "Science": {kmd: 90.5, stdev: 4.88},
+            "Life Sciences and Biochemistry": {mean: 94.5, stdev: 3.36},
+            "Commerce": {mean: 94.5, stdev: 3.73},
+            "Computing": {mean: 93.3, stdev: 3.96},
+            "Concurrent Education": {mean: 93.1, stdev: 4.59},
+            "Engineering and Applied Science": {mean: 93.5, stdev: 3.8},
+            "Health Sciences": {mean: 96.8, stdev: 3.7},
+            "Kinesiology": {mean: 92.7, stdev: 3.69},
+            "Arts": {mean: 89.7, stdev: 5.03},
+            "Music/Theatre": {mean: 90.8, stdev: 8},
+            "Nursing": {mean: 94.5, stdev: 3.48},
+            "Psychology": {mean: 85.3, stdev: 6.2},
+            "Science": {mean: 90.5, stdev: 4.88},
         },
         image: "./logo/QueensU.svg"
     }
@@ -142,5 +142,78 @@ schoolDropdown.addEventListener('change', populatePrograms);
 
 // Initialize the program dropdown based on the first selected school
 populatePrograms();
+const schools = [
+    {
+        name: 'University of Toronto',
+        location: 'Toronto, ON',
+        programs: 700,
+        meanAdmission: 96.9,
+        stdev: 3.05,
+        logo: './logo/UniversityOfToronto.jpg'
+    },
+    {
+        name: 'University of Waterloo',
+        location: 'Waterloo, ON',
+        programs: 400,
+        meanAdmission: 97.8,
+        stdev: 3.9,
+        logo: './logo/UniversityOfWaterloo.svg'
+    },
+    {
+        name: 'Queen\'s University',
+        location: 'Kingston, ON',
+        programs: 150,
+        meanAdmission: 93.3,
+        stdev: 3.96,
+        logo: './logo/QueensU.svg'
+    },
+    {
+        name: 'McMaster University',
+        location: 'Hamilton, ON',
+        programs: 300,
+        meanAdmission: 96.9,
+        stdev: 2.47,
+        logo: './logo/McMaster_University_Logo.svg'
+    }
+];
+
+function displaySchoolCards(schoolsToDisplay) {
+    const schoolCardsContainer = document.getElementById('school-cards');
+    schoolCardsContainer.innerHTML = ''; // Clear existing cards
+
+    schoolsToDisplay.forEach(school => {
+        const card = document.createElement('div');
+        card.classList.add('school-card');
+
+        card.innerHTML = `
+      <img src="${school.logo}" alt="${school.name} Logo" class="school-logo">
+      <h3>${school.name}</h3>
+      <p>Location: ${school.location}</p>
+      <p>Programs: ${school.programs}</p>
+      <p>Mean Admission Score: ${school.meanAdmission}</p>
+      <p>Standard Deviation: ${school.stdev}</p>
+    `;
+
+        // Add click event to each card to redirect to the school info page
+        card.addEventListener('click', () => {
+            // Save the selected school data in localStorage
+            localStorage.setItem('selectedSchool', JSON.stringify(school));
+
+            // Redirect to the info page
+            window.location.href = 'school-info.html';
+        });
+
+        schoolCardsContainer.appendChild(card);
+    });
+}
+
+displaySchoolCards(schools);
+
+function filterSchools() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    const filteredSchools = schools.filter(school => school.name.toLowerCase().includes(searchInput));
+    displaySchoolCards(filteredSchools);
+}
+
 
 /* made w love by soroush paidar */
