@@ -8,48 +8,46 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
   <script src="script.js" defer></script> <!-- External JS file -->
 </head>
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="style.css">
-  <nav>
-    <div class="logo" href="">unipath.</div>
-  </nav>
-  <nav>
-    <div class="nav-links">
-      <a href="">Chancing</a>
-      <a href="">Explore</a>
-      <a href="">About</a>
-    </div>
-  </nav>
-</head>
 <body>
+<nav>
+  <div class="logo">unipath.</div>
+</nav>
+<nav>
+  <div class="nav-links">
+    <a href="">Chancing</a>
+    <a href="">Explore</a>
+    <a href="">About</a>
+  </div>
+</nav>
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search schools...">
+</div>
 <div class="full">
   <div class="left-column">
     <h4>Input your marks</h4>
     <table>
       <tr>
-        <td>ENG4U</td>
+        <td id="label1">ENG4U</td>
         <td><input type="text" onchange="calculateProb()" id="course1" class="input-box"><br></td>
       </tr>
       <tr>
-        <td>MCV4U</td>
+        <td id="label2">Course 2</td>
         <td><input type="text" onchange="calculateProb()" id="course2" class="input-box"><br></td>
       </tr>
       <tr>
-        <td>Course 3</td>
+        <td id="label3">Course 3</td>
         <td><input type="text" onchange="calculateProb()" id="course3" class="input-box"><br></td>
       </tr>
       <tr>
-        <td>Course 4</td>
+        <td id="label4">Course 4</td>
         <td><input type="text" onchange="calculateProb()" id="course4" class="input-box"><br></td>
       </tr>
       <tr>
-        <td>Course 5</td>
+        <td id="label5">Course 5</td>
         <td><input type="text" onchange="calculateProb()" id="course5" class="input-box"><br></td>
       </tr>
       <tr>
-        <td>Course 6</td>
+        <td id="label6">Course 6</td>
         <td><input type="text" onchange="calculateProb()" id="course6" class="input-box"><br></td>
       </tr>
     </table>
@@ -78,6 +76,6 @@
   </div>
 </div>
 
-
+</div>
 </body>
 </html>

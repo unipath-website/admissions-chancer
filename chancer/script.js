@@ -8,17 +8,42 @@ const resultParagraph = document.getElementById('result');
 const imageElement = document.getElementById("displayedImage");
 const schoolLocation = document.getElementById('schoollocation');
 
+// Updated schoolPrograms with prerequisites
 const schoolPrograms = {
     utsg: {
         name: "University of Toronto",
         location: "Toronto, ON",
         programs: {
-            "Social Sciences": {mean: 91.8, stdev: 4.65},
-            "Physical and Mathematical Sciences": {mean: 93.4, stdev: 4.112},
-            "Humanities": {mean: 91.5, stdev: 5.1},
-            "Life Sciences": {mean: 94.1, stdev: 4.08},
-            "Rotman Commerce": {mean: 95.2, stdev: 3.248},
-            "Computer Science": {mean: 96.9, stdev: 3.05},
+            "Social Sciences": {
+                mean: 91.8, 
+                stdev: 4.65, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Physical and Mathematical Sciences": {
+                mean: 93.4, 
+                stdev: 4.112, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Humanities": {
+                mean: 91.5, 
+                stdev: 5.1, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Life Sciences": {
+                mean: 94.1, 
+                stdev: 4.08, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Rotman Commerce": {
+                mean: 95.2, 
+                stdev: 3.248, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Computer Science": {
+                mean: 96.9, 
+                stdev: 3.05, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            }
         },
         image: "./logo/UniversityOfToronto.jpg"
     },
@@ -26,12 +51,36 @@ const schoolPrograms = {
         name: "University of Waterloo",
         location: "Waterloo, ON",
         programs: {
-            "School of Architecture": {mean: 91.3, stdev: 4.77},
-            "School of Computer Science": {mean: 97.8, stdev: 3.9},
-            "Faculty of Engineering": {mean: 95.6, stdev: 3.43},
-            "Faculty of Mathematics": {mean: 95.1, stdev: 3.37},
-            "Faculty of Health": {mean: 90.7, stdev: 3.82},
-            "Faculty of Science": {mean: 91.4, stdev: 4.91},
+            "School of Architecture": {
+                mean: 91.3, 
+                stdev: 4.77, 
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "SPH4U", "Course 5", "Course 6"]
+            },
+            "School of Computer Science": {
+                mean: 97.8, 
+                stdev: 3.9, 
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
+            },
+            "Faculty of Engineering": {
+                mean: 95.6, 
+                stdev: 3.43, 
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "SPH4U", "SCH4U", "Course 6"]
+            },
+            "Faculty of Mathematics": {
+                mean: 95.1, 
+                stdev: 3.37, 
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
+            },
+            "Faculty of Health": {
+                mean: 90.7, 
+                stdev: 3.82, 
+                prerequisites: ["ENG4U", "Math 4U", "SCH4U", "SBI4U", "Course 5", "Course 6"]
+            },
+            "Faculty of Science": {
+                mean: 91.4, 
+                stdev: 4.91, 
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science/Math 4U", "Science/Math 4U", "Course 6"]
+            }
         },
         image: "./logo/UniversityOfWaterloo.svg"
     },
@@ -39,9 +88,41 @@ const schoolPrograms = {
         name: "McMaster University",
         location: "Hamilton, ON",
         programs: {
-            "Health Sciences": {mean: 98, stdev: 2.0},
-            "Engineering": {mean: 92, stdev: 3.8},
-            "Business": {mean: 90, stdev: 4.2}
+            "Life Sciences": {
+                mean: 95.1,
+                stdev: 3.29,
+                prerequisites: ["ENG4U", "MHF4U/MCV4U", "SBI4U", "MHF/MCV/SCH/SPH", "Course 5", "Course 6"]
+            },
+            "Business": {
+                mean: 91,
+                stdev: 4.16,
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
+            },
+            "Computer Science": {
+                mean: 96.9,
+                stdev: 2.47,
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science/ICS4U/TEJ4M", "Course 5", "Course 6"]
+            },
+            "Health Sciences": {
+                mean: 98, 
+                stdev: 2.0, 
+                prerequisites: ["ENG4U", "Math 4U", "SCH4U", "SBI4U", "Course 5", "Course 6"]
+            },
+            "Engineering": {
+                mean: 92, 
+                stdev: 3.8, 
+                prerequisites: ["ENG4U", "MCV4U", "SPH4U", "SCH4U", "Course 5", "Course 6"]
+            },
+            "Mathematics and Statistics": {
+                mean: 90.7,
+                stdev: 4.31,
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
+            },
+            "Chemical and Physical Sciences": {
+                mean: 91.6,
+                stdev: 4.48,
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "SPH4U", "SCH4U", "Course 6"]
+            }
         },
         image: "./logo/McMaster_University_Logo.svg"
     },
@@ -49,18 +130,66 @@ const schoolPrograms = {
         name: "Queen's University",
         location: "Kingston, ON",
         programs: {
-            "Life Sciences and Biochemistry": {mean: 94.5, stdev: 3.36},
-            "Commerce": {mean: 94.5, stdev: 3.73},
-            "Computing": {mean: 93.3, stdev: 3.96},
-            "Concurrent Education": {mean: 93.1, stdev: 4.59},
-            "Engineering and Applied Science": {mean: 93.5, stdev: 3.8},
-            "Health Sciences": {mean: 96.8, stdev: 3.7},
-            "Kinesiology": {mean: 92.7, stdev: 3.69},
-            "Arts": {mean: 89.7, stdev: 5.03},
-            "Music/Theatre": {mean: 90.8, stdev: 8},
-            "Nursing": {mean: 94.5, stdev: 3.48},
-            "Psychology": {mean: 85.3, stdev: 6.2},
-            "Science": {mean: 90.5, stdev: 4.88},
+            "Life Sciences and Biochemistry": {
+                mean: 94.5, 
+                stdev: 3.36, 
+                prerequisites: ["ENG4U", "MC", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Commerce": {
+                mean: 94.5, 
+                stdev: 3.73, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Computing": {
+                mean: 93.3, 
+                stdev: 3.96, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Concurrent Education": {
+                mean: 93.1, 
+                stdev: 4.59, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Engineering and Applied Science": {
+                mean: 93.5, 
+                stdev: 3.8, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Health Sciences": {
+                mean: 96.8, 
+                stdev: 3.7, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Kinesiology": {
+                mean: 92.7, 
+                stdev: 3.69, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Arts": {
+                mean: 89.7, 
+                stdev: 5.03, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Music/Theatre": {
+                mean: 90.8, 
+                stdev: 8, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Nursing": {
+                mean: 94.5, 
+                stdev: 3.48, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Psychology": {
+                mean: 85.3, 
+                stdev: 6.2, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Science": {
+                mean: 90.5, 
+                stdev: 4.88, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            }
         },
         image: "./logo/QueensU.svg"
     }
@@ -81,10 +210,25 @@ function populatePrograms() {
             option.textContent = program;
             programDropdown.appendChild(option);
         });
-    }
 
-    // Automatically calculate the probability after programs are populated
-    calculateProb();
+        // Automatically update labels and calculate probability after programs are populated
+        updateLabels();
+        calculateProb();
+    }
+}
+
+function updateLabels() {
+    const selectedSchool = schoolDropdown.value;
+    const selectedProgram = programDropdown.value;
+    const prerequisites = schoolPrograms[selectedSchool]?.programs[selectedProgram]?.prerequisites;
+
+    if (prerequisites) {
+        // Update labels for each input based on prerequisites
+        for (let i = 0; i < 6; i++) {
+            const label = document.getElementById(`label${i + 1}`);
+            label.textContent = prerequisites[i] || `Course ${i + 1}`;
+        }
+    }
 }
 
 function calculateProb() {
@@ -140,8 +284,15 @@ function calculateProb() {
 // Event listener for school selection to populate programs
 schoolDropdown.addEventListener('change', populatePrograms);
 
+// Event listener for program selection to update labels and calculate probability
+programDropdown.addEventListener('change', () => {
+    updateLabels();
+    calculateProb();
+});
+
 // Initialize the program dropdown based on the first selected school
 populatePrograms();
+
 const schools = [
     {
         name: 'University of Toronto',
@@ -185,14 +336,10 @@ function displaySchoolCards(schoolsToDisplay) {
         const card = document.createElement('div');
         card.classList.add('school-card');
 
-        card.innerHTML = `
-      <img src="${school.logo}" alt="${school.name} Logo" class="school-logo">
+        card.innerHTML = 
+      `<img src="${school.logo}" alt="${school.name} Logo" class="school-logo">
       <h3>${school.name}</h3>
-      <p>Location: ${school.location}</p>
-      <p>Programs: ${school.programs}</p>
-      <p>Mean Admission Score: ${school.meanAdmission}</p>
-      <p>Standard Deviation: ${school.stdev}</p>
-    `;
+      <p>Location: ${school.location}</p>`;
 
         // Add click event to each card to redirect to the school info page
         card.addEventListener('click', () => {
@@ -214,6 +361,11 @@ function filterSchools() {
     const filteredSchools = schools.filter(school => school.name.toLowerCase().includes(searchInput));
     displaySchoolCards(filteredSchools);
 }
+function filterSchools() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    const filteredSchools = schools.filter(school => school.name.toLowerCase().includes(searchInput));
+    displaySchoolCards(filteredSchools);
+}
 
-
-/* made w love by soroush paidar */
+// Add an event listener for the search input to call the filterSchools function
+document.getElementById('search-input').addEventListener('input', filterSchools);
