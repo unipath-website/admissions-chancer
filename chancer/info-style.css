@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    padding: 40px;
     margin: 0;
     background: #f9fbfd;
 }
@@ -47,4 +46,7 @@ nav {
     padding: 0 40px;
     font-size: 18px;
     background-color: #ffffff;
+}
+.school-info-container {
+    padding: 40px;
 }

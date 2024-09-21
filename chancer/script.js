@@ -8,7 +8,6 @@ const resultParagraph = document.getElementById('result');
 const imageElement = document.getElementById("displayedImage");
 const schoolLocation = document.getElementById('schoollocation');
 
-// Updated schoolPrograms with prerequisites
 const schoolPrograms = {
     utsg: {
         name: "University of Toronto",
@@ -17,7 +16,7 @@ const schoolPrograms = {
             "Social Sciences": {
                 mean: 91.8, 
                 stdev: 4.65, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Physical and Mathematical Sciences": {
                 mean: 93.4, 
@@ -27,7 +26,7 @@ const schoolPrograms = {
             "Humanities": {
                 mean: 91.5, 
                 stdev: 5.1, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Life Sciences": {
                 mean: 94.1, 
@@ -45,7 +44,7 @@ const schoolPrograms = {
                 prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             }
         },
-        image: "./logo/UniversityOfToronto.jpg"
+        image: "./logo/UniversityOfToronto.jpg",
     },
     uw: {
         name: "University of Waterloo",
@@ -133,65 +132,125 @@ const schoolPrograms = {
             "Life Sciences and Biochemistry": {
                 mean: 94.5, 
                 stdev: 3.36, 
-                prerequisites: ["ENG4U", "MC", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science 4U", "Science 4U", "Course 6"]
             },
             "Commerce": {
                 mean: 94.5, 
                 stdev: 3.73, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Math 4U", "Course 4", "Course 5", "Course 6"]
             },
             "Computing": {
                 mean: 93.3, 
                 stdev: 3.96, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
             },
-            "Concurrent Education": {
+            "Concurrent Education/Science": {
                 mean: 93.1, 
                 stdev: 4.59, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science 4U", "Science 4U", "Course 6"]
+            },
+            "Concurrent Education/Arts": {
+                mean: 93.1,
+                stdev: 4.59,
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Concurrent Education/Kinesiology": {
+                mean: 93.1,
+                stdev: 4.59,
+                prerequisites: ["ENG4U", "MHF4U", "SBI4U", "MCV/SCH/SPH", "MCV/SCH/SPH", "Course 6"]
             },
             "Engineering and Applied Science": {
                 mean: 93.5, 
                 stdev: 3.8, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "SPH4U", "SCH4U", "Course 6"]
             },
             "Health Sciences": {
                 mean: 96.8, 
                 stdev: 3.7, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "SCH4U", "SBI4U", "Math 4U", "Course 5", "Course 6"]
             },
             "Kinesiology": {
                 mean: 92.7, 
-                stdev: 3.69, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                stdev: 3.69,
+                prerequisites: ["ENG4U", "MHF4U", "SBI4U", "MCV/SCH/SPH", "MCV/SCH/SPH", "Course 6"]
             },
             "Arts": {
                 mean: 89.7, 
                 stdev: 5.03, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Music/Theatre": {
                 mean: 90.8, 
                 stdev: 8, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Nursing": {
                 mean: 94.5, 
-                stdev: 3.48, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
-            },
-            "Psychology": {
-                mean: 85.3, 
-                stdev: 6.2, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                stdev: 3.48,
+                prerequisites: ["ENG4U", "SCH4U", "SBI4U", "Math 4U", "Course 5", "Course 6"]
             },
             "Science": {
                 mean: 90.5, 
                 stdev: 4.88, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science 4U", "Science 4U", "Course 6"]
             }
         },
         image: "./logo/QueensU.svg"
+    },
+    wu: {
+        name: "Western University",
+        location: "London, ON",
+        programs: {
+            "Medical Sciences": {
+              mean: 95.9,
+              stdev: 2.98,
+            },
+            "Management and Organizational Studies": {
+                mean: 93.6,
+                stdev: 3.89,
+            },
+            "Information and Media Studies": {
+                mean: 90.2,
+                stdev: 5.1
+            },
+            "Engineering": {
+                mean: 92.5,
+                stdev: 3.88,
+            },
+            "Family and Consumer/Human Sciences": {
+                mean: 89.6,
+                stdev: 3.03
+            },
+            "Health Sciences": {
+                mean: 94.2,
+                stdev: 3.63
+            },
+            "Kinesiology": {
+                mean: 91.9,
+                stdev: 3.72
+            },
+            "Humanities": {
+                mean: 90.9,
+                stdev: 5.01
+            },
+            "Music": {
+                mean: 90.7,
+                stdev: 4.9
+            },
+            "Nursing": {
+                mean: 94.1,
+                stdev: 3.74
+            },
+            "Science": {
+                mean: 91.7,
+                stdev: 4.26
+            },
+            "Social Science": {
+                mean: 91.6,
+                stdev: 4.61
+            }
+
+        }
     }
 };
 
