@@ -51,6 +51,7 @@ nav {
 .school-info-container {
     width: 75%;
     margin: auto;
+    letter-spacing: -0.05em;
 }
 .school-info-container img {
     width: 100%;
@@ -58,7 +59,11 @@ nav {
     object-fit: cover;
     margin: auto;
     border-radius: 25px;
-
+    position: relative;
+    filter: brightness(70%)
+}
+.school-info-container h1 {
+    font-weight: 600;
 }
 .header {
     position: relative;
@@ -81,16 +86,6 @@ nav {
     margin-top: 5px;
     margin-right: 10px;
     float: left;
-}
-.campus {
-    width: fit-content;
-    height: fit-content;
-    line-height: 0px;
-    background: white;
-    border-radius: 20px;
-    padding: 2px 14px;
-    border: #E3E5EA 2px solid;
-    margin-top: 5px;
-    margin-right: 10px;
-    float: left;
+    letter-spacing: -0.03em;
+    font-weight: 500;
 }

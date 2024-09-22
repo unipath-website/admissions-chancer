@@ -311,7 +311,7 @@ const schools = [
         programs: 400,
         meanAdmission: 97.8,
         stdev: 3.9,
-        logo: './logo/UniversityOfWaterloo.svg'
+        logo: './logo/UniversityOfWaterloo.svg',
     },
     {
         name: 'Queen\'s University',
