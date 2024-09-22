@@ -13,14 +13,11 @@ const schoolPrograms = {
     utsg: {
         name: "University of Toronto",
         location: "Toronto, ON",
-        image: "./logo/UniversityOfToronto.jpg",
-        header: "./header/utsg.jpg",
-        campus: "Urban",
         programs: {
             "Social Sciences": {
                 mean: 91.8, 
                 stdev: 4.65, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Physical and Mathematical Sciences": {
                 mean: 93.4, 
@@ -30,7 +27,7 @@ const schoolPrograms = {
             "Humanities": {
                 mean: 91.5, 
                 stdev: 5.1, 
-                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Life Sciences": {
                 mean: 94.1, 
@@ -48,6 +45,7 @@ const schoolPrograms = {
                 prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             }
         },
+        image: "./logo/UniversityOfToronto.jpg"
     },
     uw: {
         name: "University of Waterloo",
@@ -56,12 +54,12 @@ const schoolPrograms = {
             "School of Architecture": {
                 mean: 91.3, 
                 stdev: 4.77, 
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "SPH4U", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "School of Computer Science": {
                 mean: 97.8, 
                 stdev: 3.9, 
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Faculty of Engineering": {
                 mean: 95.6, 
@@ -71,17 +69,17 @@ const schoolPrograms = {
             "Faculty of Mathematics": {
                 mean: 95.1, 
                 stdev: 3.37, 
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Faculty of Health": {
                 mean: 90.7, 
                 stdev: 3.82, 
-                prerequisites: ["ENG4U", "Math 4U", "SCH4U", "SBI4U", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Faculty of Science": {
                 mean: 91.4, 
                 stdev: 4.91, 
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science/Math 4U", "Science/Math 4U", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             }
         },
         image: "./logo/UniversityOfWaterloo.svg"
@@ -90,44 +88,112 @@ const schoolPrograms = {
         name: "McMaster University",
         location: "Hamilton, ON",
         programs: {
-            "Life Sciences": {
-                mean: 95.1,
-                stdev: 3.29,
-                prerequisites: ["ENG4U", "MHF4U/MCV4U", "SBI4U", "MHF/MCV/SCH/SPH", "Course 5", "Course 6"]
-            },
-            "Business": {
-                mean: 91,
-                stdev: 4.16,
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
-            },
-            "Computer Science": {
-                mean: 96.9,
-                stdev: 2.47,
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Science/ICS4U/TEJ4M", "Course 5", "Course 6"]
-            },
             "Health Sciences": {
                 mean: 98, 
                 stdev: 2.0, 
-                prerequisites: ["ENG4U", "Math 4U", "SCH4U", "SBI4U", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
             "Engineering": {
                 mean: 92, 
                 stdev: 3.8, 
-                prerequisites: ["ENG4U", "MCV4U", "SPH4U", "SCH4U", "Course 5", "Course 6"]
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             },
-            "Mathematics and Statistics": {
-                mean: 90.7,
-                stdev: 4.31,
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "Course 4", "Course 5", "Course 6"]
-            },
-            "Chemical and Physical Sciences": {
-                mean: 91.6,
-                stdev: 4.48,
-                prerequisites: ["ENG4U", "MHF4U", "MCV4U", "SPH4U", "SCH4U", "Course 6"]
+            "Business": {
+                mean: 90, 
+                stdev: 4.2, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
             }
         },
         image: "./logo/McMaster_University_Logo.svg"
-    }
+    },
+    qu: {
+        name: "Queen's University",
+        location: "Kingston, ON",
+        programs: {
+            "Life Sciences and Biochemistry": {
+                mean: 94.5, 
+                stdev: 3.36, 
+                prerequisites: ["ENG4U", "MC", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Commerce": {
+                mean: 94.5, 
+                stdev: 3.73, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Computing": {
+                mean: 93.3, 
+                stdev: 3.96, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Concurrent Education": {
+                mean: 93.1, 
+                stdev: 4.59, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Engineering and Applied Science": {
+                mean: 93.5, 
+                stdev: 3.8, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Health Sciences": {
+                mean: 96.8, 
+                stdev: 3.7, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Kinesiology": {
+                mean: 92.7, 
+                stdev: 3.69, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Arts": {
+                mean: 89.7, 
+                stdev: 5.03, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Music/Theatre": {
+                mean: 90.8, 
+                stdev: 8, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Nursing": {
+                mean: 94.5, 
+                stdev: 3.48, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Psychology": {
+                mean: 85.3, 
+                stdev: 6.2, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            },
+            "Science": {
+                mean: 90.5, 
+                stdev: 4.88, 
+                prerequisites: ["ENG4U", "MCV4U", "Course 3", "Course 4", "Course 5", "Course 6"]
+            }
+        },
+        image: "./logo/QueensU.svg"
+    },
+    tmu:{
+        name: "Toronto Metropolitan University",
+        location: "Toronto, ON",
+        programs: {
+
+        }
+    },
+    wu:{
+        name: "Western University",
+        location: "London, ON",
+        programs: {
+
+        }
+    },
+    wlu:{
+        name: "Wilfrid Laurier University",
+        location: "Waterloo, ON",
+        programs: {
+
+        }
+    },
 };
 
 function populatePrograms() {
@@ -236,10 +302,13 @@ const schools = [
         stdev: 3.05,
         logo: './logo/UniversityOfToronto.jpg',
         header: './header/utsg.jpg',
+        campus: "Urban",
+        stuco: "58,000 Students"
     },
     {
         name: 'University of Waterloo',
         location: 'Waterloo, ON',
+        programs: 400,
         meanAdmission: 97.8,
         stdev: 3.9,
         logo: './logo/UniversityOfWaterloo.svg'
@@ -247,6 +316,7 @@ const schools = [
     {
         name: 'Queen\'s University',
         location: 'Kingston, ON',
+        programs: 150,
         meanAdmission: 93.3,
         stdev: 3.96,
         logo: './logo/QueensU.svg'
@@ -254,6 +324,7 @@ const schools = [
     {
         name: 'McMaster University',
         location: 'Hamilton, ON',
+        programs: 300,
         meanAdmission: 96.9,
         stdev: 2.47,
         logo: './logo/McMaster_University_Logo.svg'

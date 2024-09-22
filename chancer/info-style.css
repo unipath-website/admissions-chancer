@@ -70,7 +70,7 @@ nav {
      bottom: 0px;
      left: 25px;
  }
-.location {
+.chip {
     width: fit-content;
     height: fit-content;
     line-height: 0px;
@@ -79,7 +79,7 @@ nav {
     padding: 2px 14px;
     border: #E3E5EA 2px solid;
     margin-top: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
     float: left;
 }
 .campus {
@@ -91,6 +91,6 @@ nav {
     padding: 2px 14px;
     border: #E3E5EA 2px solid;
     margin-top: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
     float: left;
 }
