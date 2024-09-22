@@ -4,7 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     padding: 40px;
     margin: 0;
-    background: #f9fbfd;
+    background: #F9FBFD;
 }
 img {
     height: 150px;
@@ -47,4 +47,50 @@ nav {
     padding: 0 40px;
     font-size: 18px;
     background-color: #ffffff;
+}
+.school-info-container {
+    width: 75%;
+    margin: auto;
+}
+.school-info-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 25px;
+
+}
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.text {
+     position: absolute;
+     bottom: 0px;
+     left: 25px;
+ }
+.location {
+    width: fit-content;
+    height: fit-content;
+    line-height: 0px;
+    background: white;
+    border-radius: 20px;
+    padding: 2px 14px;
+    border: #E3E5EA 2px solid;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;
+}
+.campus {
+    width: fit-content;
+    height: fit-content;
+    line-height: 0px;
+    background: white;
+    border-radius: 20px;
+    padding: 2px 14px;
+    border: #E3E5EA 2px solid;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;
 }
