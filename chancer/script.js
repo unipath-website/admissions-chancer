@@ -303,7 +303,9 @@ const schools = [
         logo: './logo/UniversityOfToronto.jpg',
         header: './header/utsg.jpg',
         campus: "Urban",
-        stuco: "58,000 Students"
+        stuco: "58,000 Students",
+        macleans: "1st",
+        qs: "25th"
     },
     {
         name: 'University of Waterloo',
